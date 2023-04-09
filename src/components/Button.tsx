@@ -3,7 +3,9 @@ import React from 'react'
 
 function Button({ text, link }: { text: string, link: string }) {
     return (
-        <Link href={link} className="btn">Button</Link>
+        <Link href={link} className="btn">
+            {text}
+        </Link>
     )
 }
 
