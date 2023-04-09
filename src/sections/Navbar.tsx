@@ -5,9 +5,8 @@ import Button from "@/components/Button";
 
 function Navbar() {
   const sectionLinks = [
-    { name: "About", link: "/#about" },
-    { name: "Experience", link: "/#experience" },
-    { name: "Work", link: "/#work" },
+    { name: "Skills", link: "/#skills" },
+    { name: "Projects", link: "/#projects" },
     {
       name: "Contact",
       link: "/#contact",
