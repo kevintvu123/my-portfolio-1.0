@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 function Experience() {
   const [selected, setSelected] = useState(0);
@@ -10,7 +11,7 @@ function Experience() {
     }
     transformSelected();
   }, [selected])
-  
+
 
   const skills = [
     {
@@ -57,9 +58,17 @@ function Experience() {
     },
   ];
   return (
-    <div
+    <motion.div
       className="skill"
       id="skills"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      variants={{
+        visible: { opacity: 1, y: -50 },
+        hidden: { opacity: 0, y: 0 },
+      }}
     >
       <div className="title">
         <h2>My Skills</h2>
@@ -70,9 +79,8 @@ function Experience() {
           {skills.map((skill, index) => {
             return (
               <li
-                className={`skill-slider-item ${
-                  index === selected && "skill-slider-item-selected"
-                }`}
+                className={`skill-slider-item ${index === selected && "skill-slider-item-selected"
+                  }`}
                 onClick={() => setSelected(index)}
                 key={skill.name}
               >
@@ -98,7 +106,7 @@ function Experience() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
