@@ -78,6 +78,7 @@
             font-family: var(--fira-code);
           }
           &-title {
+            text-decoration: none;
             width: max-content;
             color: var(--lightest-slate);
             font-size: var(--txlarge);
@@ -95,7 +96,7 @@
               color: var(--light-slate);
               font-family: var(--raleway);
               padding: 2rem;
-              text-align: end;
+              text-align: start;
             }
           }
           &-tech-list {
