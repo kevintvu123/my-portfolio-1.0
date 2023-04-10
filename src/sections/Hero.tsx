@@ -63,7 +63,7 @@ function Hero() {
                     delay: 1.65,
                 }}
             >
-                <Button text="Check Out My Resume!" link="http://localhost:3000/resume.pdf" />
+                <Button text="Check Out My Resume!" link="https://kevintvu.me/resume.pdf" />
             </motion.div>
         </div>
     )
