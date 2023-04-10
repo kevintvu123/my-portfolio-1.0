@@ -1,3 +1,9 @@
 main {
     margin: 0 15rem;
 }
+
+.blur {
+    filter: blur(10px);
+    pointer-events: none;
+    user-select: none;
+}
