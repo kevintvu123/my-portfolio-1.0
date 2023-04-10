@@ -1,5 +1,5 @@
 import Link from "next/link"
-import React from 'react'
+import React, { useEffect, useState } from "react";
 import Logo from "../components/Logo"
 import Button from "@/components/Button";
 
@@ -13,9 +13,17 @@ function Navbar() {
     },
   ];
 
+  const [navbarVisible, setNavbarVisible] = useState(false)
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      window.pageYOffset>100 ? setNavbarVisible(true) : setNavbarVisible(false);
+    })
+  }, [])
+
   return (
     <nav>
-      <div className="wrapper">
+      <div className={`wrapper ${navbarVisible ? "blur-nav" : ""}`}>
         <div className="brand">
           <Link href="https://kevintvu.me">
             <Logo />

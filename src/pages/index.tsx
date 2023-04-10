@@ -1,5 +1,6 @@
 import Email from '@/components/Email';
 import SocialIcons from '@/components/SocialIcons';
+import Contact from '@/sections/Contact';
 import Hero from '@/sections/Hero';
 import Navbar from '@/sections/Navbar';
 import Projects from '@/sections/Projects';
@@ -16,6 +17,7 @@ function Index() {
         <Hero />
         <Experience />
         <Projects />
+        <Contact />
       </main>
     </div>
   )
