@@ -5,6 +5,7 @@ import {
     FiLinkedin
 } from "react-icons/fi"
 import { FaAngellist } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 function SocialIcons() {
     const socialLinks = [
@@ -26,9 +27,18 @@ function SocialIcons() {
     ];
 
     return (
-        <div className='social-icons'>
+        <motion.div
+            className='social-icons'
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{
+                duration: 0.3,
+                ease: "easeInOut",
+                delay: 1.95,
+            }}
+        >
             <ul className="social-icons-list">
-                {socialLinks.map(({name, icon, link}) => (
+                {socialLinks.map(({ name, icon, link }) => (
                     <li key={name} title={name} className='social-icons-list-item'>
                         <Link
                             href={link}
@@ -40,7 +50,7 @@ function SocialIcons() {
                     </li>
                 ))}
             </ul>
-        </div>
+        </motion.div>
     )
 }
 
