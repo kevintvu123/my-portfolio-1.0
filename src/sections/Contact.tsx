@@ -1,7 +1,6 @@
 import React from 'react'
 import Button from '@/components/Button'
 import { motion } from "framer-motion";
-
 function Contact() {
     return (
         <motion.div
